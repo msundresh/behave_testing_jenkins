@@ -1,0 +1,155 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=17628, tid=0x0000000000004758
+#
+# JRE version:  (8.0_152-b26) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b26 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002399800):  JavaThread "Unknown thread" [_thread_in_vm, id=18264, stack(0x0000000002750000,0x0000000002850000)]
+
+Stack: [0x0000000002750000,0x0000000002850000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002399800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=18264, stack(0x0000000002750000,0x0000000002850000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5580000, 0x00000000d8000000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5580000,0x00000000d5626670,0x00000000d7600000)
+  from space 5120K, 0% used [0x00000000d7b00000,0x00000000d7b00000,0x00000000d8000000)
+  to   space 5120K, 0% used [0x00000000d7600000,0x00000000d7600000,0x00000000d7b00000)
+ ParOldGen       total 87552K, used 0K [0x0000000080000000, 0x0000000085580000, 0x00000000d5580000)
+  object space 87552K, 0% used [0x0000000080000000,0x0000000080000000,0x0000000085580000)
+ Metaspace       used 772K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 73K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000002ee0000,0x00000000032f0000] byte_map_base: 0x0000000002ae0000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000008055aa0
+ Begin Bits: [0x00000000170e0000, 0x00000000190e0000)
+ End Bits:   [0x00000000190e0000, 0x000000001b0e0000)
+
+Polling page: 0x0000000000380000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000080e0000, 0x0000000008350000, 0x00000000170e0000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.551 loading class java/lang/Short
+Event: 0.552 loading class java/lang/Short done
+Event: 0.552 loading class java/lang/Integer
+Event: 0.554 loading class java/lang/Integer done
+Event: 0.554 loading class java/lang/Long
+Event: 0.555 loading class java/lang/Long done
+Event: 0.557 loading class java/lang/NullPointerException
+Event: 0.557 loading class java/lang/NullPointerException done
+Event: 0.557 loading class java/lang/ArithmeticException
+Event: 0.557 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000000013f630000 - 0x000000013f661000 	C:\Program Files\JetBrains\PyCharm 2018.3.4\jre64\bin\java.exe
+0x0000000077640000 - 0x00000000777df000 	C:\windows\SYSTEM32\ntdll.dll
+0x0000000077320000 - 0x000000007743f000 	C:\windows\system32\kernel32.dll
+0x000007fefd210000 - 0x000007fefd27a000 	C:\windows\system32\KERNELBASE.dll
+0x000007fefecd0000 - 0x000007fefedab000 	C:\windows\system32\ADVAPI32.dll
+0x000007fefe400000 - 0x000007fefe49f000 	C:\windows\system32\msvcrt.dll
+0x000007fefedb0000 - 0x000007fefedcf000 	C:\windows\SYSTEM32\sechost.dll
+0x000007fefeba0000 - 0x000007fefeccd000 	C:\windows\system32\RPCRT4.dll
+0x0000000077440000 - 0x000000007753a000 	C:\windows\system32\USER32.dll
+0x000007fefe680000 - 0x000007fefe6e7000 	C:\windows\system32\GDI32.dll
+0x000007fefef10000 - 0x000007fefef1e000 	C:\windows\system32\LPK.dll
+0x000007feff780000 - 0x000007feff84b000 	C:\windows\system32\USP10.dll
+0x000007fefbc60000 - 0x000007fefbe54000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007feff430000 - 0x000007feff4a1000 	C:\windows\system32\SHLWAPI.dll
+0x000007feff180000 - 0x000007feff1ae000 	C:\windows\system32\IMM32.DLL
+0x000007fefe2f0000 - 0x000007fefe3f9000 	C:\windows\system32\MSCTF.dll
+0x00000000001c0000 - 0x00000000001d0000 	C:\windows\System32\umppc8305.dll
+0x000007fefd0d0000 - 0x000007fefd0f5000 	C:\windows\system32\vmwsci.dll
+0x0000000078bb0000 - 0x0000000078c82000 	C:\Program Files\JetBrains\PyCharm 2018.3.4\jre64\bin\msvcr100.dll
+0x0000000007890000 - 0x00000000080d1000 	C:\Program Files\JetBrains\PyCharm 2018.3.4\jre64\bin\server\jvm.dll
+0x000007fef8be0000 - 0x000007fef8be9000 	C:\windows\system32\WSOCK32.dll
+0x000007feff110000 - 0x000007feff15d000 	C:\windows\system32\WS2_32.dll
+0x000007fefe2e0000 - 0x000007fefe2e8000 	C:\windows\system32\NSI.dll
+0x000007fefaae0000 - 0x000007fefab1b000 	C:\windows\system32\WINMM.dll
+0x000007fefc4f0000 - 0x000007fefc4fc000 	C:\windows\system32\VERSION.dll
+0x00000000777f0000 - 0x00000000777f7000 	C:\windows\system32\PSAPI.DLL
+0x000007fef3130000 - 0x000007fef313f000 	C:\Program Files\JetBrains\PyCharm 2018.3.4\jre64\bin\verify.dll
+0x000007fed8890000 - 0x000007fed88b9000 	C:\Program Files\JetBrains\PyCharm 2018.3.4\jre64\bin\java.dll
+0x000007fef0870000 - 0x000007fef0886000 	C:\Program Files\JetBrains\PyCharm 2018.3.4\jre64\bin\zip.dll
+
+VM Arguments:
+java_command: com.intellij.util.ReadEnv D:\Users\H305248\AppData\Local\Temp\intellij-cmd-env.tmp
+java_class_path (initial): C:\Program Files\JetBrains\PyCharm 2018.3.4\lib\util.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-11.0.1
+PATH=D:\Users\H305248\PycharmProjects\untitled1\venv\Scripts;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\1E\NomadBranch\;C:\Facilities Monitoring 3.0\Applications\Controls;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-11.0.1\bin;C:\sdk-tools;C:\sdk-tools\tools\;C:\sdk-tools\platform-tools\;C:\Program Files\Common Files\ThinPrint\;C:\Program Files (x86)\Plantronics\Spokes3G\;D:\Users\H305248\Downloads\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin;D:\Users\H305248\AppData\Local\Programs\Python\Python37\Scripts\;D:\Users\H305248\AppData\Local\Programs\Python\Python37\;D:\Users\H305248\Downloads\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin
+USERNAME=H305248
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 63 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24260)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 1 threads per core) family 6 model 63 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8388152k(1136648k free), swap 12580556k(5180k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b26) for windows-amd64 JRE (1.8.0_152-release-1343-b26), built on Nov 29 2018 17:33:07 by "builduser" with MS VC++ 10.0 (VS2010)
+
+time: Fri Feb 22 13:40:08 2019
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

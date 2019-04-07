@@ -1,0 +1,69 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "features/login.feature:6",
+      "name": "login",
+      "status": "failed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/login.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/login_steps.py:13"
+          },
+          "name": "I navigate to the URL",
+          "result": {
+            "duration": 10.177946090698242,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/login.feature:8",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/login_steps.py:18"
+          },
+          "name": "I login to the application",
+          "result": {
+            "duration": 84.68865418434143,
+            "error_message": [
+              "Traceback (most recent call last):",
+              "  File \"c:\\users\\schettiar\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\behave\\model.py\", line 1329, in run",
+              "    match.run(runner.context)",
+              "  File \"c:\\users\\schettiar\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\behave\\matchers.py\", line 98, in run",
+              "    self.func(context, *args, **kwargs)",
+              "  File \"features\\steps\\login_steps.py\", line 32, in step_impl",
+              "    home_page.click_add_customer_button()",
+              "  File \"C:\\Users\\schettiar\\PycharmProjects\\python_bdd_selenium\\pages\\home_page.py\", line 19, in click_add_customer_button",
+              "    self.driver.find_element_by_xpath(self.create_new_customer_button).click()",
+              "AttributeError: 'NoneType' object has no attribute 'click'"
+            ],
+            "status": "failed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/login.feature:9",
+          "name": "the application should enter accounts page",
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "GLSWW-1603"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "features/login.feature:2",
+  "name": "login",
+  "status": "failed",
+  "tags": []
+}
+]
